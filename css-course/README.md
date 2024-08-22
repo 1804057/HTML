@@ -1,4 +1,4 @@
-CSS is used to define styles for your web pages, including the design, layout and variations in display for different devices and screen sizes.
+CSS is used to define styles for your web pages, including the design, layout, and variations in display for different devices and screen sizes.
 
 ## CSS Syntax
 ![CSS structure](cssimages/Capture.png)  
@@ -16,6 +16,7 @@ Here,
 
 <div>
   <div>
+    <h3>HTML Code</h3>
     <pre>
       &lt;body&gt;
       &lt;h1&gt;Hello to CSS&lt;/h1&gt;
@@ -26,6 +27,7 @@ Here,
       &lt;div class="large"&gt;Any other element with class large won't be large..&lt;/div&gt;
       &lt;/body&gt;
     </pre>
+    <h3>CSS Code</h3>
     <pre>
     p {
         background-color: aqua;
@@ -42,6 +44,7 @@ Here,
     </pre>
   </div>
   <div>
-    <img src="./cssimage/csssyntax.png">
+    <h3>Output</h3>
+    <img src="./cssimages/csssyntax.png">
   </div>
 </div>
