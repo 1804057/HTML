@@ -58,7 +58,7 @@ Here,
     </div>
     <div>
     <h3><ins>Output</ins></h3>
-    <img src="./cssimages/csssyntax.png">
+    <img src="./cssimages/csssyntax.png" height=300>
 </div>
 
 ## CSS Backgrounds
@@ -73,7 +73,7 @@ background-position: right bottom;
 background-attachment: fixed;
 }
     </pre>
-    <img src="./cssimages/background.png">
+    <img src="./cssimages/background.png" height=500>
 
 </div>
 <h3><ins>Background Shorthand</ins></h3>
@@ -162,19 +162,19 @@ border: 5px solid red;
 <table>
     <tr>
         <td><b>left : </b></td>
-        <td><img src="./cssimages/left.PNG" height=100></td>
+        <td><img src="./cssimages/left.PNG" width=100%></td>
     </tr>
     <tr>
         <td><b>right : </b></td>
-        <td><img src="./cssimages/right.PNG" height=100></td>
+        <td><img src="./cssimages/right.PNG" width=100%></td>
     </tr>
     <tr>
         <td><b>center : </b></td>
-        <td><img src="./cssimages/center.PNG" height=100></td>
+        <td><img src="./cssimages/center.PNG" width=100%></td>
     </tr>
     <tr>
         <td><b>justify : </b></td>
-        <td><img src="./cssimages/justify.PNG" height=100></td>
+        <td><img src="./cssimages/justify.PNG" width=100%></td>
     </tr>
 </table>
 
@@ -182,7 +182,48 @@ border: 5px solid red;
 Only the last line is aligned.
 
 <h3><ins>vertical-allignment</ins></h3>
-<img src="./cssimages/verticalallignment.PNG" height=300>
+<img src="./cssimages/verticalallignment.PNG" height=400>
+
+## Text Decoration
+<ul>
+<li>
+<h3><ins>text-decoration-line</ins></h3>
+<img src="./cssimages/textdecor.PNG" height=200>
+</li>
+<li>
+<h3>
+<ins>text-decoration-color</ins></h3>
+</li>
+<li>
+<h3><ins>text-decoration-style</ins></h3>
+- double, dotted, dashed, wavy
+</li>
+<li>
+<h3><ins>text-decoration-thickness</ins></h3>
+</li>
+
+<li>
+<h3><ins>Shorthand</ins></h3>
+<pre>
+h1 {
+  text-decoration: underline;
+}
+
+h2 {
+  text-decoration: underline red;
+}
+
+h3 {
+  text-decoration: underline red double;
+}
+
+p {
+  text-decoration: underline red double 5px;
+}
+</pre>
+</li>
+</ul>
+
 
 
 
