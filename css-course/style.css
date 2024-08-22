@@ -1,0 +1,12 @@
+p {
+    background-color: aqua;
+}
+#para1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.center{
+    text-align: center;
+}
+p.large{
+    font-size: 40px;
+}
