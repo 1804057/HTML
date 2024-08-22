@@ -110,5 +110,37 @@ body {
     </table>
 </div>
 ## Box Model
-<h2>Padding, Border, Outline, Margin</h2>
-<img src="./cssimages/boxmodel">
+<h3>Padding, Border, Outline, Margin</h3>
+<img src="./cssimages/boxmodel.png">
+
+<div>
+    <table>
+        <thead>
+            <tr>
+            <th>Full Form</th>
+            <th>Short Form</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <pre>
+p {
+border-width: 5px;
+border-style: solid;
+border-color: red;
+}
+                    </pre>
+                </td>
+                <td>
+                    <pre>
+p {
+border: 5px solid red;
+}
+                    </pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
