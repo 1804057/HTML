@@ -25,7 +25,7 @@ h1,div{
     background-attachment: fixed;
 } */
 
-.parent{
+/* .parent{
     background-color: powderblue;
     text-align: center;
 }
@@ -35,8 +35,9 @@ h1,div{
     border-width: 20px;
     border-color: rgb(47, 132, 103);
 
-    outline:20px;
-    outline-color: blanchedalmond;
+    outline-width:5px;
+    outline-offset: 20px;
+    outline-color: red;
     outline-style: solid;
 
     padding: 20px;
@@ -44,4 +45,20 @@ h1,div{
 }
 p{
     background-color: aqua;
+} */
+
+p{
+    background-color: rgb(236, 211, 171);
+}
+img.top{
+    vertical-align: top;
+}
+img.bottom{
+    vertical-align: bottom;
+}
+img.sub{
+    vertical-align: sub;
+}
+img.sup{
+    vertical-align: super;
 }

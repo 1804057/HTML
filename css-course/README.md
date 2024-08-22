@@ -143,6 +143,47 @@ border: 5px solid red;
             </tr>
         </tbody>
     </table>
+    same is applicable for outline.
 </div>
+
+## CSS dimensions
+<img src="./cssimages/CSSdimensions.png">
+
+## CSS Text Alignment/Direction Properties
+<img src="./cssimages/cssAllignmentAndDirection.PNG">
+<h3><ins>direction</ins></h3>
+<ul>
+<li><b>ltr : </b>This text goes from left to right. This is default.</li>
+<li><b>rtl : </b>This text goes from right to left.</li>
+</ul>
+
+<h3><ins>text-align</ins></h3>
+<table>
+    <tr>
+        <td><b>left : </b></td>
+        <td><img src="./cssimages/left.PNG" height=100></td>
+    </tr>
+    <tr>
+        <td><b>right : </b></td>
+        <td><img src="./cssimages/right.PNG" height=100></td>
+    </tr>
+    <tr>
+        <td><b>center : </b></td>
+        <td><img src="./cssimages/center.PNG" height=100></td>
+    </tr>
+    <tr>
+        <td><b>justify : </b></td>
+        <td><img src="./cssimages/justify.PNG" height=100></td>
+    </tr>
+</table>
+
+<h3><ins>text-align-last</ins></h3>
+Only the last line is aligned.
+
+<h3><ins>vertical-allignment</ins></h3>
+<img src="./cssimages/verticalallignment.PNG" height=300>
+
+
+
 
 
