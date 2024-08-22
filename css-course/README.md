@@ -109,6 +109,7 @@ body {
         </tbody>
     </table>
 </div>
+
 ## Box Model
 <h3>Padding, Border, Outline, Margin</h3>
 <img src="./cssimages/boxmodel.png">
@@ -143,4 +144,5 @@ border: 5px solid red;
         </tbody>
     </table>
 </div>
+
 
