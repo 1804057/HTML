@@ -17,10 +17,31 @@ h1,div{
     background-color: yellow;
 } */
 
-body{
+/* body{
     background-color: pink;
     background-image: url(cssimages/sticket.png);
     background-repeat: no-repeat;
     background-position: right bottom;
     background-attachment: fixed;
+} */
+
+.parent{
+    background-color: powderblue;
+    text-align: center;
+}
+.child{
+    background-color: blueviolet;
+    border-style: solid;
+    border-width: 20px;
+    border-color: rgb(47, 132, 103);
+
+    outline:20px;
+    outline-color: blanchedalmond;
+    outline-style: solid;
+
+    padding: 20px;
+    margin: 40px;
+}
+p{
+    background-color: aqua;
 }

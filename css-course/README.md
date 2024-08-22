@@ -109,3 +109,6 @@ body {
         </tbody>
     </table>
 </div>
+## Box Model
+<h2>Padding, Border, Outline, Margin</h2>
+<img src="./cssimages/boxmodel">
