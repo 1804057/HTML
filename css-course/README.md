@@ -111,10 +111,11 @@ body {
 </div>
 
 ## Box Model
-<h3>Padding, Border, Outline, Margin</h3>
+<h3><ins>Padding, Border, Outline, Margin</ins></h3>
 <img src="./cssimages/boxmodel.png">
 
 <div>
+    <h3><ins>Border Shorthand</ins></h3>
     <table>
         <thead>
             <tr>
