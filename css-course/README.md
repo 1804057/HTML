@@ -222,8 +222,27 @@ p {
 }
 </pre>
 </li>
+<li>Tip, text-decoration:none; //to hide underline in links..</li>
 </ul>
 
+## CSS Font Family
+<h3><ins>CSS Web Safe Fonts</ins></h3>
+<p>
+There are no 100% completely web safe fonts. Therefore, developers always use fallback fonts. In examples below, last 2 fonts are fallback fonts.
+</p>
+<pre>
+.p1 {
+  font-family: "Times New Roman", Times, serif;
+}
+
+.p2 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.p3 {
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+</pre>
 
 
 
