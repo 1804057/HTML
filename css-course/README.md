@@ -421,3 +421,20 @@ a:active {
 }
 </pre>
 
+## Specificity Hierarchy
+Every CSS selector has its place in the specificity hierarchy.
+</br>
+There are four categories which define the specificity level of a selector:
+
+
+- Inline styles - Example: &lt;h1 style="color: pink;"&gt;
+- IDs - Example: #navbar
+- Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]
+- Elements and pseudo-elements - Example: h1, ::before
+
+## What is !important?
+The !important rule in CSS is used to add more importance to a property/value than normal.
+</br>
+
+In fact, if you use the !important rule, it will override ALL previous styling rules for that specific property on that element!
+
