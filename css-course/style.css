@@ -1,6 +1,7 @@
-/* *{
-    color: red;
+*{
+    font-family: "Sofia", sans-serif;
 }
+/*
 p {
     background-color: aqua;
 }
@@ -49,6 +50,7 @@ p{
 
 p{
     background-color: rgb(236, 211, 171);
+    font-size: 5vw;
 }
 img.top{
     vertical-align: top;
@@ -62,3 +64,4 @@ img.sub{
 img.sup{
     vertical-align: super;
 }
+
