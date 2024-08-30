@@ -289,8 +289,7 @@ a:visited - a link the user has visited
 a:hover - a link when the user mouses over it
 a:active - a link the moment it is clicked
 
-
-Different kind of cursors:
+<a href='https://tailwindcss.com/docs/cursor'>Different kind of cursors:</a>
 - cursor: auto;
 - cursor: default;
 - cursor: pointer;
@@ -325,10 +324,10 @@ Different kind of cursors:
 ### Striped Tables
 For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:
 tr:nth-child(even) {background-color: #f2f2f2;}
-<img src="./cssimages/stripedTable.png" height=150>
-Responsive Table
+![alt text](cssimages/stripedTable.png)
+### Responsive Table
 A responsive table will display a horizontal scroll bar if the screen is too small to display the full content:
-<img src="./cssimages/res1.png" height=150>
+<img src="./cssimages/res1.png" height=180>
 <img src="./cssimages/res2.png" height=180>
 
 ## CSS Display Properties
@@ -349,8 +348,7 @@ visibility: hidden will hide the element, but the element will still take up the
 - Setting the width of a block-level element will prevent it from stretching out to the edges of its container.
 - Using max-width instead, will improve the browser's handling of small windows.
 - We can set the margins to auto, to horizontally center the element within its container. The element will take up the specified width, and the remaining space will be split equally between the two margins.
-<img src="./cssimages/width.png" height=180>
-
+![alt text](cssimages/width.png)
 ## CSS Layout - Position Property
 - static: 
     - HTML elements are positioned static by default. Static positioned elements are not affected by the top, bottom, left, and right properties.
@@ -371,13 +369,13 @@ visibility: hidden will hide the element, but the element will still take up the
 The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
 The overflow property has the following values:
 
-- visible - Default. The overflow is not clipped. The content renders outside the element's box.
+- visible - Default. The overflow is not clipped. The content renders outside the element's box.</br>
 ![alt text](cssimages/visible.png)
-- hidden - The overflow is clipped, and the rest of the content will be invisible
+- hidden - The overflow is clipped, and the rest of the content will be invisible. </br>
 ![alt text](cssimages/hidden.png)
-- scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content
+- scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content. </br>
 ![alt text](cssimages/scroll.png)
-- auto - Similar to scroll, but it adds scrollbars only when necessary
+- auto - Similar to scroll, but it adds scrollbars only when necessary. </br>
 ![alt text](cssimages/auto.png)
 
 ## CSS Combinators
@@ -438,3 +436,24 @@ The !important rule in CSS is used to add more importance to a property/value th
 
 In fact, if you use the !important rule, it will override ALL previous styling rules for that specific property on that element!
 
+## Media Query
+<pre>
+/* Set the background color of body to tan */
+body {
+  background-color: tan;
+}
+
+/* On screens that are 992px or less, set the background color to blue */
+@media screen and (max-width: 992px) {
+  body {
+    background-color: blue;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: olive;
+  }
+}
+</pre>
