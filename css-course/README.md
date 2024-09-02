@@ -621,7 +621,11 @@ length of an individual flex-item can be.
 </pre>
 ![alt text](image-12.png)
 - <mark><b>flex : </b>The “ flex” is a shorthand property for defining flex-grow, flex-shrink, and the flex-basis properties.</mark>
-
+<pre>
+.child{
+  flex: flex-grow flex-shrink flex-basis;
+}
+</pre>
 - <b>align-self : </b>The align-self property sets the alignment property for the selected flex item inside the flex-container. This
 property overrides the default alignment property
 assigned by the container
@@ -642,6 +646,13 @@ s similarly for
 flex-start, center, space-between, space-around
 and space-evenly properties.
 ## Media Query
+Media query uses the <b>@media</b> rule to include a block of CSS properties only if a certain condition is true.
+### Syntax
+<pre>
+@media media type and (condition: breakpoint) {
+  // CSS rules
+}
+</pre>
 <pre>
 /* Set the background color of body to tan */
 body {
