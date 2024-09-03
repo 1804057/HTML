@@ -1,7 +1,5 @@
-/* *{
-    font-family: "Sofia", sans-serif;
-}
-/*
+
+
 p {
     background-color: aqua;
 }
@@ -16,17 +14,17 @@ p.large{
 }
 h1,div{
     background-color: yellow;
-} */
+} 
 
-/* body{
+ /* body{
     background-color: pink;
     background-image: url(cssimages/sticket.png);
     background-repeat: no-repeat;
     background-position: right bottom;
     background-attachment: fixed;
-} */
+}  */
 
-/* .parent{
+.parent{
     background-color: powderblue;
     text-align: center;
 }
@@ -44,11 +42,7 @@ h1,div{
     padding: 20px;
     margin: 40px;
 }
-p{
-    background-color: aqua;
-} */
 
-/*
 p{
     background-color: rgb(236, 211, 171);
     font-size: 5vw;
@@ -65,7 +59,7 @@ img.sub{
 img.sup{
     vertical-align: super;
 }
- */
+
 
  .flex-container{
     display: flex;

@@ -9,6 +9,8 @@
 - [CSS Pseudoclass](#css-pseudo-classes)
 - [CSS Background](#css-backgrounds)
 - [Box Model](#box-model)
+- [Border](#border)
+- [Padding](#padding)
 - [CSS Dimensions](#css-dimensions)
 - [CSS Text Alignment/Direction Properties](#css-text-alignmentdirection-properties)
 - [CSS Font](#css-font)
@@ -35,6 +37,8 @@ Here,
 <li>Each declaration includes a CSS property name and a value, separated by a colon.
 <li>Multiple CSS declarations are separated with semicolons, and declaration blocks are surrounded by curly braces.
 
+🔼 [Back to Top](#topics)
+
 ## CSS Selectors
 
 <li>The CSS Universal Selector '*'
@@ -46,18 +50,18 @@ Here,
 
 <div>
     <div>
-    <h3><ins>HTML Code</ins></h3>
+    <h4><ins>HTML Code</ins></h4>
     <pre>
-        &lt;body&gt;
-        &lt;h1&gt;Hello to CSS&lt;/h1&gt;
-        &lt;p&gt;Every paragraph will be affected by the style.&lt;/p&gt;
-        &lt;p id="para1"&gt;This is Para 1 id.&lt;/p&gt;
-        &lt;p class="center"&gt;This para has center class.&lt;/p&gt;
-        &lt;p class="large"&gt;All para with class large will be large&lt;/p&gt;
-        &lt;div class="large"&gt;Any other element with class large won't be large..&lt;/div&gt;
-        &lt;/body&gt;
+  &lt;body&gt;
+  &lt;h1&gt;Hello to CSS&lt;/h1&gt;
+  &lt;p&gt;Every paragraph will be affected by the style.&lt;/p&gt;
+  &lt;p id="para1"&gt;This is Para 1 id.&lt;/p&gt;
+  &lt;p class="center"&gt;This para has center class.&lt;/p&gt;
+  &lt;p class="large"&gt;All para with class large will be large&lt;/p&gt;
+  &lt;div class="large"&gt;Any other element with class large won't be large..&lt;/div&gt;
+  &lt;/body&gt;
     </pre>
-    <h3><ins>CSS Code</ins></h3>
+    <h4><ins>CSS Code</ins></h4>
     <pre>
     *{
     color: red;
@@ -80,9 +84,11 @@ Here,
     </pre>
     </div>
     <div>
-    <h3><ins>Output</ins></h3>
-    <img src="./cssimages/csssyntax.png" height=300>
+    <h4><ins>Output</ins></h4>
+    <img src="./cssimages/csssyntax.png" height=300 >
 </div>
+
+🔼 [Back to Top](#topics)
 
 ## CSS Combinators
 There are four different combinators in CSS:
@@ -99,6 +105,8 @@ There are four different combinators in CSS:
     - Sibling elements must have the same parent element, and "adjacent" means "immediately following".
 - general sibling selector (~)
     - The general sibling selector selects all elements that are next siblings of a specified element.
+  
+🔼 [Back to Top](#topics)
 
 ## CSS Pseudo-classes
 A pseudo-class is used to define a special state of an element.</br>
@@ -128,6 +136,7 @@ Another pseudo-classes are:
 - The <b>:first-child</b> pseudo-class matches a specified element that is the first child of another element.
 - The <b>:lang</b> pseudo-class allows to define special rules for different languages.
 
+🔼 [Back to Top](#topics)
 ## CSS Backgrounds
 <div>
     <h3><ins>CSS code</ins></h3>
@@ -177,107 +186,168 @@ body {
     </table>
 </div>
 
+🔼 [Back to Top](#topics)
 ## Box Model
-<h3><ins>Padding, Border, Outline, Margin</ins></h3>
+Every CSS element is essentially a box. Every element is a generic box.
+ The box model explains the sizing of the elements based on a few CSS
+ properties.</br>
+ From the inside to the outside, we have:
+ - the content area
+ - padding
+ - border
+ - outline
+ - margin
 <img src="./cssimages/boxmodel.png">
 
+🔼 [Back to Top](#topics)
+## Border
+ The border is a thin layer between padding and margin. Some border properties are:
+- `border-style` 
+- `border-color`
+- `border-width`
 
-## CSS dimensions
-<img src="./cssimages/CSSdimensions.png">
+The **border-style**  property let us choose the style of the border. The options we can use are: `dotted`, `dashed`, `solid`, `double`, `groove`, `ridge`, `inset`, `outset` etc.
+
+<img src="./image-14.png" height=300>
+
+**The border shorthand property :** `border-width` , 
+`border-style`  and `color`  can be set using the borer shorthand property.</br>
+ Example: `border: 2px black solid;` </br>
+Also we can use the **edge-specific properties** 
+`border-top` , 
+`border-right` ,
+ `border-bottom` , 
+`border-left`.</br>
+ Example:
+ <pre>
+p { 
+border-left: 2px black solid; 
+border-right: 3px red dashed; 
+}</pre>
+
+🔼 [Back to Top](#topics)
+
+## Padding
+ The padding  CSS property is commonly used in CSS to add space in the
+ inner side of an element.
+*Remember:*
+ - `margin`  adds space outside an element border
+ - `padding`  adds space inside an element border
+
+Four padding properties are:
+
+- padding-top
+- padding-right
+- padding-bottom
+- padding-left
+
+**Using the padding  `shorthand` :**
+- **1 value :**
+ Using a single value, that applies to all the paddings: top, right, bottom, left.</br>
+ Example: `padding: 20px;`
+- **2 values :**
+ Using 2 values applies the first to bottom & top, and the second to left & right.</br>
+Example: `padding: 20px 10px;`
+- **3 values :**
+ Using 3 values applies the first to top, the second to left & right, the third
+ to bottom.</br>
+Example: `padding: 20px 10px 30px;` 
+- **4 values :**
+ Using 4 values applies to top, right, bottom and left side respectively.</br>
+ Example: `padding: 20px 10px 5px 0px;`
+![alt text](image-15.png) 
+
+🔼 [Back to Top](#topics)
 
 ## CSS Text Alignment/Direction Properties
-<img src="./cssimages/cssAllignmentAndDirection.PNG">
+![alt text](cssimages/cssAllignmentAndDirection.PNG)
 
-### direction
-<ul>
-<li><b>ltr : </b>This text goes from left to right. This is default.</li>
-<li><b>rtl : </b>This text goes from right to left.</li>
-</ul>
+- ### direction
+  <ul>
+  <li><b>ltr : </b>This text goes from left to right. This is default.</li>
+  <li><b>rtl : </b>This text goes from right to left.</li>
+  </ul>
 
-### text-align
-<table>
-    <tr>
-        <td><b>left : </b></td>
-        <td><img src="./cssimages/left.PNG" width=100%></td>
-    </tr>
-    <tr>
-        <td><b>right : </b></td>
-        <td><img src="./cssimages/right.PNG" width=100%></td>
-    </tr>
-    <tr>
-        <td><b>center : </b></td>
-        <td><img src="./cssimages/center.PNG" width=100%></td>
-    </tr>
-    <tr>
-        <td><b>justify : </b></td>
-        <td><img src="./cssimages/justify.PNG" width=100%></td>
-    </tr>
-</table>
+- ### text-align
+  <table>
+      <tr>
+          <td><b>left : </b></td>
+          <td><img src="./cssimages/left.PNG" width=100%></td>
+      </tr>
+      <tr>
+          <td><b>right : </b></td>
+          <td><img src="./cssimages/right.PNG" width=100%></td>
+      </tr>
+      <tr>
+          <td><b>center : </b></td>
+          <td><img src="./cssimages/center.PNG" width=100%></td>
+      </tr>
+      <tr>
+          <td><b>justify : </b></td>
+          <td><img src="./cssimages/justify.PNG" width=100%></td>
+      </tr>
+  </table>
 
-### text-align-last
-Only the last line is aligned.
+- ### text-align-last
+  Only the last line is aligned.
 
-<h3><ins>vertical-allignment</ins></h3>
-<img src="./cssimages/verticalallignment.PNG" height=400>
+- ### vertical-allignment
+  <img src="./cssimages/verticalallignment.PNG" height=400>
 
-### Text Decoration
-<ul>
-<li>
-<h3><ins>text-decoration-line</ins></h3>
-<img src="./cssimages/textdecor.PNG" height=200>
-</li>
-<li>
-<h3>
-<ins>text-decoration-color</ins></h3>
-</li>
-<li>
-<h3><ins>text-decoration-style</ins></h3>
-<li>double, dotted, dashed, wavy
-</li>
-<li>
-<h3><ins>text-decoration-thickness</ins></h3>
-</li>
-</ul>
+- ### Text Decoration
+  <ul>
+  <li>
+  text-decoration-line
+  <img src="./cssimages/textdecor.PNG" height=200>
+  </li>
+  <li>
+  text-decoration-color
+  </li>
+  <li>text-decoration-style</li>
+  <li>double, dotted, dashed, wavy
+  </li>
+  <li>text-decoration-thickness
+  </li>
+  </ul>
 
+🔼 [Back to Top](#topics)
 ## CSS Font
-### CSS Google Fonts
-<pre>
-&lt;head&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Sofia&quot;&gt;
-&lt;style&gt;
-body {
-  font-family: &quot;Sofia&quot;, sans-serif;
-}
-&lt;/style&gt;
-&lt;/head&gt;
-</pre>
-### CSS Web Safe Fonts
-<p>
-There are no 100% completely web safe fonts. Therefore, developers always use fallback fonts. In examples below, last 2 fonts are fallback fonts.
-</p>
-<pre>
-.p1 {
-  font-family: "Times New Roman", Times, serif;
-}
+- ### CSS Google Fonts
+  <pre>
+  &lt;head&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Sofia&quot;&gt;
+  &lt;style&gt;
+  body {
+    font-family: &quot;Sofia&quot;, sans-serif;
+  }
+  &lt;/style&gt;
+  &lt;/head&gt;
+  </pre>
+- ### CSS Web Safe Fonts
+  <p>
+  There are no 100% completely web safe fonts. Therefore, developers always use fallback fonts. In examples below, last 2 fonts are fallback fonts.
+  </p>
+  <pre>
+  .p1 {
+    font-family: "Times New Roman", Times, serif;
+  }
+  .p2 {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .p3 {
+    font-family: "Lucida Console", "Courier New", monospace;
+  }
+  </pre>
 
-.p2 {
-  font-family: Arial, Helvetica, sans-serif;
-}
+- ### Responsive font-size with Viewport Width
+  <p>
+  <b>Responsive Font Size : </b>The text size can be set with a vw unit, which means the "viewport width". Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.
+  </p> 
 
-.p3 {
-  font-family: "Lucida Console", "Courier New", monospace;
-}
-</pre>
+  ![alt text](cssimages/Viewportbig.png)
+  ![alt text](cssimages/Viewportsmall.png)
 
-### Responsive font-size with Viewport Width
-<p>
-<b>Responsive Font Size : </b>The text size can be set with a vw unit, which means the "viewport width". Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.
-</p> 
-
-![alt text](cssimages/Viewportbig.png)
-![alt text](cssimages/Viewportsmall.png)
-
-
+🔼 [Back to Top](#topics)
 
 ## Styling Links
 The four links states are:
@@ -287,7 +357,9 @@ The four links states are:
 - a:hover - a link when the user mouses over it
 - a:active - a link the moment it is clicked
 
-## Different kind of cursors
+🔼 [Back to Top](#topics)
+
+<!-- ## Different kind of cursors
 <a href='https://tailwindcss.com/docs/cursor'>link</a>
 - cursor: auto;
 - cursor: default;
@@ -320,29 +392,34 @@ The four links states are:
 - cursor: zoom-in;
 - cursor: zoom-out;
 
+🔼 [Back to Top](#topics) -->
+
 ## Tables
-### Striped Tables
-For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:
-tr:nth-child(even) {background-color: #f2f2f2;}
-![alt text](cssimages/stripedTable.png)
-### Responsive Table
-A responsive table will display a horizontal scroll bar if the screen is too small to display the full content:
-![alt text](cssimages/res1.png)
-![alt text](cssimages/res2.png)
+- ### Striped Tables
+  For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:
+  tr:nth-child(even) {background-color: #f2f2f2;}
+  ![alt text](cssimages/stripedTable.png)
+- ### Responsive Table
+  A responsive table will display a horizontal scroll bar if the screen is too small to display the full content:
+  ![alt text](cssimages/res1.png)
+  ![alt text](cssimages/res2.png)
 
 ## CSS Display Properties
-Property Description: Display	Specifies how an element should be displayed
-visibility	Specifies whether or not an element should be visible. visibility:hidden - Hides an element.But the element will still take up the same space as before.
 Some display properties:
 - inline (Displays an element as an inline element)
 - block (Displays an element as a block element)
 - flex (Displays an element as a block-level flex container)
 - grid (Displays an element as a block-level grid container)
-- none (The element is completely removed)
-display:none vs visibility:hidden
-display:none will completely remove the element. The next element will take up its space.
+- none (The element is completely removed)</br>
+**display:none vs visibility:hidden**</br>
+`display:none` will completely remove the element. The next element will take up its space.</br>
 on the other hand,
-visibility: hidden will hide the element, but the element will still take up the same space as before
+`visibility: hidden` will hide the element, but the element will still take up the same space as before.
+
+## CSS dimensions
+<img src="./cssimages/CSSdimensions.png">
+
+🔼 [Back to Top](#topics)
 
 ## Using width, max-width and margin: auto;
 - Setting the width of a block-level element will prevent it from stretching out to the edges of its container.
@@ -350,41 +427,48 @@ visibility: hidden will hide the element, but the element will still take up the
 - We can set the margins to auto, to horizontally center the element within its container. The element will take up the specified width, and the remaining space will be split equally between the two margins.
 ![alt text](cssimages/width.png)
 
+🔼 [Back to Top](#topics)
+
 ## CSS Layout - Position Property
-- static: 
-    - HTML elements are positioned static by default. Static positioned elements are not affected by the top, bottom, left, and right properties.
-- relative
-    - An element with position: relative; is positioned relative to its normal position. Setting the top, right, bottom, and left properties of a relatively-positioned element will adjust away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
-- absolute
-    - An element with position: absolute; is positioned relative to its relatively positioned parent element.
+- `static`
+    - HTML elements are `position: static;` by default. Static positioned elements are not affected by the top, bottom, left, and right properties.
+- `relative`
+    - An element with `position: relative;` is positioned relative to its normal position. Setting the top, right, bottom, and left properties of a relatively-positioned element will adjust away from its normal position. Other content will not be adjusted to fit into any gap left by the element.
+- `absolute`
+    - An element with `position: absolute;` is positioned relative to its relatively positioned parent element.
     ![alt text](cssimages/position.png)
-- fixed
-    - An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. 
-    - The top, right, bottom, and left properties are used to position the element.
+- `fixed`
+    - An element with `position: fixed;` is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. 
+    - The **top, right, bottom,** and **left** properties are used to position the element.
     - A fixed element <b>does not</b> leave a gap in the page where it would normally have been located.
     ![alt text](cssimages/fixed.png)
-- sticky
+- `sticky`
     - A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+
+🔼 [Back to Top](#topics)
 
 ## CSS Overflow
 The overflow property specifies whether to clip the content or to add scrollbars when the content of an element is too big to fit in the specified area.
 The overflow property has the following values:
 
-- visible - Default. The overflow is not clipped. The content renders outside the element's box.</br>
+- `overflow: visible;` - Default. The overflow is not clipped. The content renders outside the element's box.</br>
 ![alt text](cssimages/visible.png)
-- hidden - The overflow is clipped, and the rest of the content will be invisible. </br>
+- `overflow: hidden` - The overflow is clipped, and the rest of the content will be invisible. </br>
 ![alt text](cssimages/hidden.png)
-- scroll - The overflow is clipped, and a scrollbar is added to see the rest of the content. </br>
+- `overflow: scroll` - The overflow is clipped, and a scrollbar is added to see the rest of the content. </br>
 ![alt text](cssimages/scroll.png)
-- auto - Similar to scroll, but it adds scrollbars only when necessary. </br>
+- `overflow: auto` - Similar to scroll, but it adds scrollbars only when necessary. </br>
 ![alt text](cssimages/auto.png)
 
+🔼 [Back to Top](#topics)
 
 ## What is !important?
 The !important rule in CSS is used to add more importance to a property/value than normal.
 </br>
 
 In fact, if you use the !important rule, it will override ALL previous styling rules for that specific property on that element!
+
+🔼 [Back to Top](#topics)
 
 ## Flexbox
 The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.
@@ -396,14 +480,13 @@ The Flexible Box Layout Module, makes it easier to design flexible responsive la
 &lt;/div&gt;
 </pre>
 Here, container is the parent class and all elements inside the flexbox are child classes, which we will organise.</br>
-### Parent Properties
+### *<mark>Parent Properties </mark>*
 The flex container properties are:
-- <b>display:</b> flex (This creates a flex container.Elements under the container will turn into flex items.)
+- <b>`display:`</b> flex (This creates a flex container.Elements under the container will turn into flex items.)
 <pre>
 .container{
   dispaly: flex;
-}
-</pre>
+}</pre>
 - <b>flex-wrap : </b> Default behaviour of flexbox tries to fit the flex items well within a single line. The flex-wrap property enables us to wrap the items in the next row.
   - <u>nowrap (default value):</u> nowrap value specifies the flex items not to wrap.
   - <u>wrap:</u> wrap value specifies the flex items to wrap if required.
@@ -754,5 +837,39 @@ p.b {
   font: italic small-caps bold 12px/30px Georgia, serif;
 }
 </pre>
+
+### Background Shorthand
+<div>
+    <table>
+        <thead>
+            <tr>
+            <th>Full Form</th>
+            <th>Short Form</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <pre>
+body {
+  background-color: #ffffff;
+  background-image: url("img_tree.png");
+  background-repeat: no-repeat;
+  background-position: right top;
+}
+                    </pre>
+                </td>
+                <td>
+                    <pre>
+body {
+  background: #ffffff url("img_tree.png") no-repeat right top;
+}
+                    </pre>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 
 
