@@ -15,16 +15,16 @@
 - [CSS Text Alignment/Direction Properties](#css-text-alignmentdirection-properties)
 - [CSS Font](#css-font)
 - [Styling Links](#styling-links)
-- [Different kind of cursors](#different-kind-of-cursors)
 - [Tables](#tables)
 - [CSS Display Properties](#css-display-properties)
 - [max--min](#using-width-max-width-and-margin-auto)
 - [CSS Layout - Position Property](#css-layout---position-property)
 - [CSS Overflow](#css-overflow)
 - [What is !important?](#what-is-important)
-- [Media Query](#media-query)
-- [Specificity Hierarchy](#specificity-hierarchy)
 - [Flexbox](#flexbox)
+  - [Parent Properties](#parent-properties)
+  - [Child Properties](#child-properties)
+- [Media Query](#media-query)
 - [CSS Shorthands](#css-shorthands)
 
 
@@ -105,7 +105,17 @@ There are four different combinators in CSS:
     - Sibling elements must have the same parent element, and "adjacent" means "immediately following".
 - general sibling selector (~)
     - The general sibling selector selects all elements that are next siblings of a specified element.
-  
+### Specificity Hierarchy
+Every CSS selector has its place in the specificity hierarchy.
+</br>
+There are four categories which define the specificity level of a selector:
+
+
+- Inline styles - Example: &lt;h1 style="color: pink;"&gt;
+- IDs - Example: #navbar
+- Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]
+- Elements and pseudo-elements - Example: h1, ::before
+ 
 🔼 [Back to Top](#topics)
 
 ## CSS Pseudo-classes
@@ -483,24 +493,24 @@ Here, container is the parent class and all elements inside the flexbox are chil
 ### *<mark>Parent Properties </mark>*
 The flex container properties are:
 - <b>`display:`</b> flex (This creates a flex container.Elements under the container will turn into flex items.)
-<pre>
-.container{
-  dispaly: flex;
-}</pre>
-- <b>flex-wrap : </b> Default behaviour of flexbox tries to fit the flex items well within a single line. The flex-wrap property enables us to wrap the items in the next row.
+  <pre>
+  .container{
+    dispaly: flex;
+  }</pre>
+- <b>`flex-wrap :` </b> Default behaviour of flexbox tries to fit the flex items well within a single line. The flex-wrap property enables us to wrap the items in the next row.
   - <u>nowrap (default value):</u> nowrap value specifies the flex items not to wrap.
   - <u>wrap:</u> wrap value specifies the flex items to wrap if required.
   - <u>wrap-reverse:</u> wrap-reverse specifies the flex items to wrap in the reverse order if required.
-<pre>
-.container{
-  dispaly: flex;
-  flex-wrap: nowrap| wrap|wrap-reverse;
-}
-</pre>
-![alt text](image-2.png)
+  <pre>
+  .container{
+    dispaly: flex;
+    flex-wrap: nowrap| wrap|wrap-reverse;
+  }
+  </pre>
+  ![alt text](image-2.png)
   
 
-- <b>flex-direction : </b> Flex direction defines the axis in which the container should stack the flex items. Horizontal rows or vertical columns.
+- <b>`flex-direction :` </b> Flex direction defines the axis in which the container should stack the flex items. Horizontal rows or vertical columns.
   - <u>row (default value):</u>
 row value stacks the flex items in the
 horizontal direction from left to right.
@@ -513,221 +523,202 @@ direction from top to bottom.
   - <u>column-reverse:</u>
 column-reverse value stacks the flex
 items in the vertical direction from bottom to top.
-<pre>
-.container{
-  dispaly: flex;
-  flex-direction: row| row-reverse| column| column-reverse;
-}
-</pre>
-![alt text](image-3.png)
+  <pre>
+  .container{
+    dispaly: flex;
+    flex-direction: row| row-reverse| column| column-reverse;
+  }
+  </pre>
+  ![alt text](image-3.png)
 
-- <b>flex-flow : </b>This property is a shorthand for the flex-direction
-property and the flex-wrap property.
-<pre>
-.container{
-  dispaly: flex;
-  flex-flow: row wrap;
-}
-</pre>
+- <b>`flex-flow :` </b>This property is a shorthand for the flex-direction property and the flex-wrap property.
+  <pre>
+  .container{
+    dispaly: flex;
+    flex-flow: row wrap;
+  }
+  </pre>
 
-- <b>justify-content : </b> The justify-content property aligns the flex items along the <b>main axis</b>. For flex items in row, the justify-content property will align the item in the horizontal direction. For flex items in column, the justify-content property will align the item in the vertical direction.
-  - <u>flex-start (default value):</u>
+- <b>`justify-content :` </b> The justify-content property aligns the flex items along the <b>main axis</b>. For flex items in row, the justify-content property will align the item in the horizontal direction. For flex items in column, the justify-content property will align the item in the vertical direction.
+  - <u>**flex-start (default value):**</u>
 Flex items are stacked at the
 beggining of the flex container.
-  - <u>flex-end:</u>
+  - <u>**flex-end:**</u>
 Flex items are stacked at the end of the flex
 container.
-  - <u>center:</u>
+  - <u>**center:**</u>
 Flex items are stacked at the center of the flex
 container.
-  - <u>space-between:</u>
+  - <u>**space-between:**</u>
 Flex items are evenly spaced in a line.
-space-around:
-Flex items are evenly distributed with e
-q
-ual
-space around them.
-  - <u>space-evenly:</u>
+space-around:Flex items are evenly distributed with equal space around them.
+  - <u>**space-evenly:**</u>
 Flex items are distributed in a way that the
-spacing between any two ad
-j
-acent items are e
-q
-ual
-<pre>
-.container{
-  dispaly: flex;
-  justify-content: flex-start | flex-end | center | space-around | space-around | space-evenly;
-}
-</pre>
-![alt text](image-5.png)
-- <b>align-items : </b>The align-items property aligns the flex items along
-the <b>cross axis</b>.
-For flex items in row, the align-items property will align
-items in vertical direction from top to bottom.
-For flex items in column, the align-items property will
+spacing between any two adjacent items are equal
+  <pre>
+  .container{
+    dispaly: flex;
+    justify-content: flex-start | flex-end | center | space-around | space-around | space-evenly;
+  }
+  </pre>
+  ![alt text](image-5.png)
+- <b>`align-items :` </b>The align-items property aligns the flex items along
+the <b>cross axis</b>.</br>
+For flex-direction: row, the align-items property will align
+items in vertical direction from top to bottom. 
+For flex items-direction: column, the align-items property will
 align items in horizontal direction from left to right.
-  - <u>stretch (Default value):</u>
+  - <u>**stretch (Default value):**</u>
 Flex items are stretched to fill up the
 flex container.
-  - <u>flex-start:</u>
+  - <u>**flex-start:**</u>
 Flex items are stacked at top of the flex
 container.
-  - <u>flex-end:</u>
+  - <u>**flex-end:**</u>
 Flex items are stacked at bottom of the flex
 container.
-  - <u>center:</u>
+  - <u>**center:**</u>
 Flex items are stacked at middle of the flex
 container.
-  - <u>baseline:</u>
+  - <u>**baseline:**</u>
 Flex items are aligned such that individual
 baselines align at the same level. The baselines are
 calculated by considering the size of the content inside the
 container.
-I
-n the above example, the baseline is taken with
-respect to the text in individual items.
-<pre>
-.container{
-  dispaly: flex;
-  align-items: flex-start | flex-end | center | stretch | baseline;
-}
-</pre>
-![alt text](image-6.png)
-- <b>align-content : </b>The align-content property is similar to the
+
+  <pre>
+  .container{
+    dispaly: flex;
+    align-items: flex-start | flex-end | center | stretch | baseline;
+  }
+  </pre>
+  ![alt text](image-6.png)
+- <b>`align-content :` </b>The align-content property is similar to the
 align-items property, but this aligns flex lines instead
 of the flex items across the cross axis. This works only
 when there are multiple lines of flex items.
-  - <u>flex-start:</u>
+  - <u>**flex-start:**</u>
 Lines of flex items are stacked at the start of the
 flex container.
-  - <u>flex-end:</u>
+  - <u>**flex-end:**</u>
 Lines of flex items are stacked at the end of the
 flex container.
-  - <u>center:</u>
+  - <u>**center:**</u>
 Lines of flex items are stacked at the center of the
 flex container.
-  - <u>stretch:</u>
+  - <u>**stretch:**</u>
 Lines of flex items are stretched to fill up the flex
 container.
-  - <u>space-between:</u>
+  - <u>**space-between:**</u>
 Lines of flex items arranged evenly in the
 flex container
-  - <u>space-around:</u>
+  - <u>**space-around:**</u>
 Lines of flex items arranged in the flex
 container, with half space on either ends of the flex
 container.
-  - <u>space-evenly:</u>
-Lines of flex items arranged in the flex
-container, with e
-qual space around them.
-<pre>
-.container{
-  dispaly: flex;
-  align-content: flex-start | flex-end | center | stretch | space-around | space-between | space-evenly;
-}
-</pre>
-![alt text](image-7.png)
-- <b>Perfect Centering of elements:</b>
-This trick can solve the most common problem
-face by any developer.
-<pre>
-.container{
-  dispaly: flex;
-  justify-content: center;
-  align-items: center;
-}
-</pre>
-![alt text](image-8.png)
+  - <u>**space-evenly:**</u> Lines of flex items arranged in the flex
+container, with equal space around them.
+  <pre>
+  .container{
+    dispaly: flex;
+    align-content: flex-start | flex-end | center | stretch | space-around | space-between | space-evenly;
+  }
+  </pre>
+  ![alt text](image-7.png)
+- <b>`Perfect Centering of elements:`</b>This trick can solve the most common problem face by any developer.
+  <pre>
+  .container{
+    dispaly: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  </pre>
+  ![alt text](image-8.png)
 
-### Child Properties
+🔼 [Back to Top](#topics)
+
+### <mark>*Child Properties*</mark>
 The flex item properties are:
-- <b>order : </b>The order property defines the order in which the flex items are to be arranged in. By default, flex
+- <b>`order : `</b>The order property defines the order in which the flex items are to be arranged in. By default, flex
 items will be arranged in the source order. The
 initial value of order is 0 “ZERO”.
-<pre>
-&lt;div&gt;
-  class=&quot;flex-container&quot;
-  &lt;div style=&quot;order: 1&quot;&gt; 1 &lt;/div&gt;
-  &lt;div style=&quot;order: 3&quot;&gt; 2 &lt;/div&gt;
-  &lt;div style=&quot;order: 2&quot;&gt; 3 &lt;/div&gt;
-  &lt;div style=&quot;order: 0&quot;&gt; 4 &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-![alt text](image-9.png)
-- <b>flex-grow : </b>This defines how much a flex item can grow inside the flex container. The default value is 0. In row-1, the
+  <pre>
+  &lt;div&gt;
+    class=&quot;flex-container&quot;
+    &lt;div style=&quot;order: 1&quot;&gt; 1 &lt;/div&gt;
+    &lt;div style=&quot;order: 3&quot;&gt; 2 &lt;/div&gt;
+    &lt;div style=&quot;order: 2&quot;&gt; 3 &lt;/div&gt;
+    &lt;div style=&quot;order: 0&quot;&gt; 4 &lt;/div&gt;
+  &lt;/div&gt;
+  </pre>
+  ![alt text](image-9.png)
+- <b>`flex-grow : `</b>This defines how much a flex item can grow inside the flex container. The default value is 0. In row-1, the
 first and the last are of equal sizes, but the second
 item is twice as big as the first or the last item.
-<pre>
-&lt;div&gt class=&quot;row-1&quot;;
-  &lt;div style=&quot;flex-grow: 1&quot;&gt;  1  &lt;/div&gt;
-  &lt;div style=&quot;flex-grow: 2&quot;&gt;  2  &lt;/div&gt;
-  &lt;div style=&quot;flex-grow: 1&quot;&gt;  1  &lt;/div&gt;
-&lt;/div&gt;
-&lt;div class=&quot;row-2&quot;&gt;
-  &lt;div style=&quot;flex-grow: 1&quot;&gt;  1  &lt;/div&gt;
-  &lt;div style=&quot;flex-grow: 1&quot;&gt;  1  &lt;/div&gt;
-  &lt;div style=&quot;flex-grow: 1&quot;&gt;  1  &lt;/div&gt;
-&lt;/div&gt;
+  <pre>
+    &lt;div&gt class=&quot;row-1&quot;;
+      &lt;div style=&quot;flex-grow: 1&quot;&gt;  1  &lt;/div&gt;
+      &lt;div style=&quot;flex-grow: 2&quot;&gt;  2  &lt;/div&gt;
+      &lt;div style=&quot;flex-grow: 1&quot;&gt;  1  &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;row-2&quot;&gt;
+      &lt;div style=&quot;flex-grow: 1&quot;&gt;  1  &lt;/div&gt;
+      &lt;div style=&quot;flex-grow: 1&quot;&gt;  1  &lt;/div&gt;
+      &lt;div style=&quot;flex-grow: 1&quot;&gt;  1  &lt;/div&gt;
+    &lt;/div&gt;
+  </pre>
+  ![alt text](image-10.png)
+- <b>`flex-shrink :` </b>The flex-shrink property defines how a flex item should shrink relative to the rest of the flex items. Here, default value is 1.
+  <pre>
+  &lt;div class=&quot;flex-container&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;  1  &lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;  2  &lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;  3  &lt;/div&gt;
+    &lt;div class=&quot;item&quot; style=&quot;flex-shrink: 0&quot;&gt;  4  &lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;  5  &lt;/div&gt;
+    .
+    .
+    .
+    &lt;div class=&quot;item&quot;&gt;  9  &lt;/div&gt;
+  &lt;/div&gt;
+  </pre>
+  ![alt text](image-11.png)
 
-</pre>
-![alt text](image-10.png)
-- <b>flex-shrink : </b>The flex-shrin
-k
-property defines how a flex item
-should shrin
-k
-relative to the rest of the flex items. Here, default value is 1.
-<pre>
-&lt;div class=&quot;flex-container&quot;&gt;
-  &lt;div class=&quot;item&quot;&gt;  1  &lt;/div&gt;
-  &lt;div class=&quot;item&quot;&gt;  2  &lt;/div&gt;
-  &lt;div class=&quot;item&quot;&gt;  3  &lt;/div&gt;
-  &lt;div class=&quot;item&quot; style=&quot;flex-shrink: 0&quot;&gt;  4  &lt;/div&gt;
-  &lt;div class=&quot;item&quot;&gt;  5  &lt;/div&gt;
-  .
-  .
-  .
-  &lt;div class=&quot;item&quot;&gt;  9  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-![alt text](image-11.png)
-- <b>flex-basis : </b>The flex-basis property defines how much the initial
-length of an individual flex-item can be.
-<pre>
-&lt;div class=&quot;flex-container&quot;&gt;
-  &lt;div&gt;  1  &lt;/div&gt;
-  &lt;div&gt;  2  &lt;/div&gt;
-  &lt;div style=&quot;flex-basis: 300px&quot;&gt;   3  &lt;/div&gt;
-  &lt;div&gt;  4  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-![alt text](image-12.png)
-- <mark><b>flex : </b>The “ flex” is a shorthand property for defining flex-grow, flex-shrink, and the flex-basis properties.</mark>
-<pre>
-.child{
-  flex: flex-grow flex-shrink flex-basis;
-}
-</pre>
-- <b>align-self : </b>The align-self property sets the alignment property for the selected flex item inside the flex-container. This
+- <b>`flex-basis :`</b>The flex-basis property defines how much the initial length of an individual flex-item can be.
+  <pre>
+  &lt;div class=&quot;flex-container&quot;&gt;
+    &lt;div&gt;  1  &lt;/div&gt;
+    &lt;div&gt;  2  &lt;/div&gt;
+    &lt;div style=&quot;flex-basis: 300px&quot;&gt;   3  &lt;/div&gt;
+    &lt;div&gt;  4  &lt;/div&gt;
+  &lt;/div&gt;
+  </pre>
+  ![alt text](image-12.png)
+- <b>Flex Shorthand `flex :` </b>The “ flex” is a shorthand property for defining flex-grow, flex-shrink, and the flex-basis properties.
+  <pre>
+  .child{
+    flex: flex-grow flex-shrink flex-basis;
+  }</pre>
+- <b>`align-self :` </b>The align-self property sets the alignment property for the selected flex item inside the flex-container. This
 property overrides the default alignment property
 assigned by the container
 s align-items property.
-<pre>
-&lt;div class=&quot;container&quot; style=&quot;flex-start&quot;&gt;
-  &lt;div&gt;  1  &lt;/div&gt;
-  &lt;div&gt;  2  &lt;/div&gt;
-  &lt;div style=&quot;align-self: flex-end&quot;&gt;  3  &lt;/div&gt;
-  &lt;div&gt;  4  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-![alt text](image-13.png)
+  <pre>
+  &lt;div class=&quot;container&quot; style=&quot;flex-start&quot;&gt;
+    &lt;div&gt;  1  &lt;/div&gt;
+    &lt;div&gt;  2  &lt;/div&gt;
+    &lt;div style=&quot;align-self: flex-end&quot;&gt;  3  &lt;/div&gt;
+    &lt;div&gt;  4  &lt;/div&gt;
+  &lt;/div&gt;
+  </pre>
+  ![alt text](image-13.png)
 
-The align-self property wor
-k
-s similarly for
-flex-start, center, space-between, space-around
-and space-evenly properties.
+  The align-self property works similarly for
+  flex-start, center, space-between, space-around
+  and space-evenly properties.
+
+🔼 [Back to Top](#topics)
+
 ## Media Query
 Media query uses the <b>@media</b> rule to include a block of CSS properties only if a certain condition is true.
 ### Syntax
@@ -757,16 +748,6 @@ body {
 }
 </pre>
 
-## Specificity Hierarchy
-Every CSS selector has its place in the specificity hierarchy.
-</br>
-There are four categories which define the specificity level of a selector:
-
-
-- Inline styles - Example: &lt;h1 style="color: pink;"&gt;
-- IDs - Example: #navbar
-- Classes, pseudo-classes, attribute selectors - Example: .test, :hover, [href]
-- Elements and pseudo-elements - Example: h1, ::before
 
 
 ## CSS Shorthands
