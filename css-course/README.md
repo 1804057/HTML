@@ -17,7 +17,6 @@
 - [Styling Links](#styling-links)
 - [Tables](#tables)
 - [CSS Display Properties](#css-display-properties)
-- [max--min](#using-width-max-width-and-margin-auto)
 - [CSS Layout - Position Property](#css-layout---position-property)
 - [CSS Overflow](#css-overflow)
 - [What is !important?](#what-is-important)
@@ -265,7 +264,8 @@ Example: `padding: 20px 10px 30px;`
 - **4 values :**
  Using 4 values applies to top, right, bottom and left side respectively.</br>
  Example: `padding: 20px 10px 5px 0px;`
-![alt text](image-15.png) 
+
+  ![alt text](image-15.png) 
 
 🔼 [Back to Top](#topics)
 
@@ -298,7 +298,7 @@ Example: `padding: 20px 10px 30px;`
       </tr>
   </table>
 
-- ### text-align-last
+- ### <mark>text-align-last</mark>
   Only the last line is aligned.
 
 - ### vertical-allignment
@@ -307,16 +307,16 @@ Example: `padding: 20px 10px 30px;`
 - ### Text Decoration
   <ul>
   <li>
-  text-decoration-line
+  <b>text-decoration-line</b>
+  
   <img src="./cssimages/textdecor.PNG" height=200>
   </li>
   <li>
-  text-decoration-color
+  <b>text-decoration-color</b>
   </li>
-  <li>text-decoration-style</li>
-  <li>double, dotted, dashed, wavy
+  <li><b>text-decoration-style:</b> double, dotted, dashed, wavy
   </li>
-  <li>text-decoration-thickness
+  <li><b>text-decoration-thickness</b>
   </li>
   </ul>
 
@@ -324,14 +324,14 @@ Example: `padding: 20px 10px 30px;`
 ## CSS Font
 - ### CSS Google Fonts
   <pre>
-  &lt;head&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Sofia&quot;&gt;
-  &lt;style&gt;
-  body {
-    font-family: &quot;Sofia&quot;, sans-serif;
-  }
-  &lt;/style&gt;
-  &lt;/head&gt;
+    &lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Sofia&quot;&gt;
+    &lt;style&gt;
+    body {
+      font-family: &quot;Sofia&quot;, sans-serif;
+    }
+    &lt;/style&gt;
+    &lt;/head&gt;
   </pre>
 - ### CSS Web Safe Fonts
   <p>
@@ -357,15 +357,34 @@ Example: `padding: 20px 10px 30px;`
   ![alt text](cssimages/Viewportbig.png)
   ![alt text](cssimages/Viewportsmall.png)
 
+### Font Shorthand:
+**CSS font property:**
+<ul>
+<li>font-style</li>
+<li>font-variant (normal/ smal-caps)</li>
+<li>font-weight</li>
+<li>font-size/line-height</li>
+<li>font-family</li>
+</ul>
+
+Here, **The font-size and font-family values are required**. If one of the other values is missing, their default value are used.
+<pre>
+p.a {
+  font: 20px Arial, sans-serif;
+}
+p.b {
+  font: italic small-caps bold 12px/30px Georgia, serif;
+}
+</pre>
 🔼 [Back to Top](#topics)
 
 ## Styling Links
 The four links states are:
 
-- a:link - a normal, unvisited link
-- a:visited - a link the user has visited
-- a:hover - a link when the user mouses over it
-- a:active - a link the moment it is clicked
+- **a:link -** a normal, unvisited link
+- **a:visited -** a link the user has visited
+- **a:hover -** a link when the user mouses over it
+- **a:active -** a link the moment it is clicked
 
 🔼 [Back to Top](#topics)
 
@@ -407,12 +426,19 @@ The four links states are:
 ## Tables
 - ### Striped Tables
   For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:
-  tr:nth-child(even) {background-color: #f2f2f2;}
+  <pre>
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }</pre>
+
   ![alt text](cssimages/stripedTable.png)
 - ### Responsive Table
   A responsive table will display a horizontal scroll bar if the screen is too small to display the full content:
+
   ![alt text](cssimages/res1.png)
   ![alt text](cssimages/res2.png)
+
+🔼 [Back to Top](#topics)
 
 ## CSS Display Properties
 Some display properties:
@@ -421,17 +447,17 @@ Some display properties:
 - flex (Displays an element as a block-level flex container)
 - grid (Displays an element as a block-level grid container)
 - none (The element is completely removed)</br>
-**display:none vs visibility:hidden**</br>
+- <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_display#:~:text=%3E-,Difference%20between%20display%3Anone%20and%20visiblity%3A%20hidden,not%20take%20up%20any%20space."><b> display:none vs visibility:hidden </a></b></br>
 `display:none` will completely remove the element. The next element will take up its space.</br>
 on the other hand,
 `visibility: hidden` will hide the element, but the element will still take up the same space as before.
 
+🔼 [Back to Top](#topics)
+
 ## CSS dimensions
 <img src="./cssimages/CSSdimensions.png">
 
-🔼 [Back to Top](#topics)
-
-## Using width, max-width and margin: auto;
+### Using width, max-width and margin: auto;
 - Setting the width of a block-level element will prevent it from stretching out to the edges of its container.
 - Using max-width instead, will improve the browser's handling of small windows.
 - We can set the margins to auto, to horizontally center the element within its container. The element will take up the specified width, and the remaining space will be split equally between the two margins.
@@ -747,7 +773,7 @@ body {
   }
 }
 </pre>
-
+🔼 [Back to Top](#topics)
 
 
 ## CSS Shorthands
@@ -852,5 +878,6 @@ body {
     </table>
 </div>
 
+🔼 [Back to Top](#topics)
 
 
