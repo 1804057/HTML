@@ -208,6 +208,14 @@ Every CSS element is essentially a box. Every element is a generic box.
  - margin
 <img src="./cssimages/boxmodel.png">
 
+- <b>Box Sizing:  <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss3_box-sizing_new"> (Demo 🔗)</a></b> Defines how the width and height of an element are calculated. Should they include padding and borders, or not.
+
+  ### Without Box-size: border-box
+  ![alt text](image-16.png)
+
+  ### With Box-size:  border-box
+  ![alt text](image-17.png)
+
 🔼 [Back to Top](#topics)
 ## Border
  The border is a thin layer between padding and margin. Some border properties are:
@@ -219,8 +227,7 @@ The **border-style**  property let us choose the style of the border. The option
 
 <img src="./image-14.png" height=300>
 
-**The border shorthand property :** `border-width` , 
-`border-style`  and `color`  can be set using the borer shorthand property.</br>
+**The border shorthand property :** `border-width` , `color` and `border-style`  can be set using the borer shorthand property.</br>
  Example: `border: 2px black solid;` </br>
 Also we can use the **edge-specific properties** 
 `border-top` , 
@@ -322,7 +329,7 @@ Example: `padding: 20px 10px 30px;`
 
 🔼 [Back to Top](#topics)
 ## CSS Font
-- ### CSS Google Fonts
+- ### CSS Google Fonts (<a href="https://fonts.google.com/">🔗page</a>)
   <pre>
     &lt;head&gt;
     &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Sofia&quot;&gt;
@@ -447,7 +454,7 @@ Some display properties:
 - flex (Displays an element as a block-level flex container)
 - grid (Displays an element as a block-level grid container)
 - none (The element is completely removed)</br>
-- <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_display#:~:text=%3E-,Difference%20between%20display%3Anone%20and%20visiblity%3A%20hidden,not%20take%20up%20any%20space."><b> display:none vs visibility:hidden </a></b></br>
+- <b> display:none vs visibility:hidden <a href="https://www.w3schools.com/css/tryit.asp?filename=trycss_display#:~:text=%3E-,Difference%20between%20display%3Anone%20and%20visiblity%3A%20hidden,not%20take%20up%20any%20space.">(demo 🔗)</a></b></br>
 `display:none` will completely remove the element. The next element will take up its space.</br>
 on the other hand,
 `visibility: hidden` will hide the element, but the element will still take up the same space as before.
@@ -557,7 +564,7 @@ items in the vertical direction from bottom to top.
   </pre>
   ![alt text](image-3.png)
 
-- <b>`flex-flow :` </b>This property is a shorthand for the flex-direction property and the flex-wrap property.
+- <b>`flex-flow :` </b>This property is a **shorthand** for the flex-direction property and the flex-wrap property.
   <pre>
   .container{
     dispaly: flex;
