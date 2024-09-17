@@ -92,4 +92,156 @@
 
 - Variables which are declared without the `let` or `const` keywords are automatically created in the `global` scope. This can create unintended consequences elsewhere in your code or when running a function again. You should always declare your variables with `let` or `const`.
 - Strict equality (`===`) is the counterpart to the equality operator (`==`). `Equality operator` operator (`==`) attempts to convert both values being compared to a common type. But the `strict equality` (`===`) operator does not perform a type conversion. If the values being compared have different types, they are considered unequal, and the strict equality operator will return false.
-- 
+## JS Objects
+JavaScript is designed on a simple object-based paradigm. An object is a collection of properties, and a property is an association between a **key** and a **value**. A property's value can be a function, in which case the property is known as a method.
+
+### Creating a JavaScript Object
+
+- <pre>const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};</pre>
+
+- <pre>
+  const person = {
+  firstName: "John",
+  lastName: "Doe",
+  age: 50,
+  eyeColor: "blue"
+  };</pre>
+
+
+- **Creating an empty JavaScript object**
+    <pre>
+    const person = {};
+    person.firstName = "John";
+    person.lastName = "Doe";
+    person.age = 50;
+    person.eyeColor = "blue";</pre>
+- **Using the new Keyword**
+    <pre>
+    const person = new Object();
+    person.firstName = "John";
+    person.lastName = "Doe";
+    person.age = 50;
+    person.eyeColor = "blue";</pre>
+
+### Access object properties in two ways:
+
+`objectName.propertyName` </br>
+`objectName["propertyName"]`
+
+### JavaScript Object Methods
+Methods are actions that can be performed on objects.
+They are function definitions stored as property values.
+**Example**
+<pre>const person = {
+  firstName: "John",
+  lastName : "Doe",
+  id       : 5566,
+  fullName : function() {
+    return this.firstName + " " + this.lastName;
+  }
+  // another way
+  fullName2() {
+    return this.firstName + " " + this.lastName;
+  }
+};</pre>
+In the example above, `this` refers to the person object.</br>
+
+### Accessing Object Methods **<a href='https://www.w3schools.com/js/tryit.asp?filename=tryjs_object_function'>Demo</a>**
+
+We access an object method with the following syntax:
+`objectName.methodName()`
+
+If you invoke the fullName property with (), it will execute as a function:
+**Example:**
+<pre>name = person.fullName();</pre>
+If you access the fullName property without (), it will return the function definition: 
+**Example**
+<pre>name = person.fullName;</pre>
+
+
+**In JavaScript, almost "everything" is an object.**
+
+- Objects are objects
+- Maths are objects
+- Functions are objects
+- Dates are objects
+- Arrays are objects
+- Maps are objects
+- Sets are objects
+
+**All JavaScript values, except primitives, are objects.**
+
+7 JS primitive data types are:
+- string
+- number
+- boolean
+- null
+- undefined
+- symbol
+- bigint
+
+### JS Objects are Mutable
+In JS objects are addressed by reference, not by value.
+
+If `person` is an object, the following statement will not create a copy of person:
+
+<pre>
+//Create an Object
+const person = {
+  firstName:"John",
+  lastName:"Doe",
+  age:50, eyeColor:"blue"
+}
+
+// Create a copy
+const x = person;
+
+// Change Age in both
+x.age = 10;
+</pre>
+The object x is **not a copy of person**. The object x is person.
+The object x and the object person share the same memory address.
+Any changes to x will also change person:
+
+
+### Deleting Properties
+The delete keyword deletes a property from an object:
+
+`delete person.age;` or `delete person["age"];`
+
+The delete keyword deletes both the value of the property and the property itself. After deletion, the property cannot be used before it is added back again.
+
+### Common HTML Events
+<table>
+        <tr>
+            <th>Event</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>onchange</td>
+            <td>An HTML element has been changed</td>
+        </tr>
+        <tr>
+            <td>onclick</td>
+            <td>The user clicks an HTML element</td>
+        </tr>
+        <tr>
+            <td>onmouseover</td>
+            <td>The user moves the mouse over an HTML element</td>
+        </tr>
+        <tr>
+            <td>onmouseout</td>
+            <td>The user moves the mouse away from an HTML element</td>
+        </tr>
+        <tr>
+            <td>onkeydown</td>
+            <td>The user pushes a keyboard key</td>
+        </tr>
+        <tr>
+            <td>onload</td>
+            <td>The browser has finished loading the page</td>
+        </tr>
+    </table>
+
+### Comparing two JavaScript objects always returns false.
+

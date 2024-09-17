@@ -1,0 +1,9 @@
+IOC inversion of control
+seperate variable, and constant 
+Code to interface, not to implementation
+
+Ovserver
+Decorator
+Strategy
+Chain of Responsibility
+State Machine
