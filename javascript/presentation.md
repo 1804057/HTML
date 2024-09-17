@@ -977,40 +977,19 @@ The `filter()` method creates a new array with array elements that pass a test.
 
 This example creates a new array from elements with a value larger than 18:
 
-### Example
-
+```js
 const numbers = \[45, 4, 9, 16, 25\];  
+const over10 = numbers.filter(x=> x>10);
 const over18 = numbers.filter(myFunction);
 
 function myFunction(value, index, array) {  
   return value > 18;  
 }
-
+```
 [Demo »](https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_filter)
 
-Note that the function takes 3 arguments:
 
-*   The item value
-*   The item index
-*   The array itself
-
-In the example above, the callback function does not use the index and array parameters, so they can be omitted:
-
-### Example
-
-const numbers = \[45, 4, 9, 16, 25\];  
-const over18 = numbers.filter(myFunction);
-
-function myFunction(value) {  
-  return value > 18;  
-}
-
-[Demo »](https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_filter_2)
-
-* * *
-
-JavaScript Array reduce()
--------------------------
+## JavaScript Array reduce()
 
 The `reduce()` method runs a function on each array element to produce (reduce it to) a single value.
 
@@ -1020,15 +999,14 @@ The `reduce()` method does not reduce the original array.
 
 This example finds the sum of all numbers in an array:
 
-### Example
-
-const numbers = \[45, 4, 9, 16, 25\];  
+```js
+const numbers = [45, 4, 9, 16, 25];  
 let sum = numbers.reduce(myFunction);
 
 function myFunction(total, value, index, array) {  
   return total + value;  
 }
-
+```
 [Demo »](https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_reduce)
 
 Note that the function takes 4 arguments:
@@ -1037,19 +1015,6 @@ Note that the function takes 4 arguments:
 *   The item value
 *   The item index
 *   The array itself
-
-The example above does not use the index and array parameters. It can be rewritten to:
-
-### Example
-
-const numbers = \[45, 4, 9, 16, 25\];  
-let sum = numbers.reduce(myFunction);
-
-function myFunction(total, value) {  
-  return total + value;  
-}
-
-[Demo »](https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_reduce_2)
 
 The `reduce()` method can accept an initial value:
 
