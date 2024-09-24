@@ -278,6 +278,8 @@ The **Addition Assignment Operator** (`+=`) adds a value to a variable.
 |<=      |less than or equal to            |
 |?       |ternary operator                 |
 
+🔼 [Back to Top](#topics)
+
 # JavaScript Datatypes
 ## JavaScript has 8 Datatypes
 * String
@@ -292,6 +294,8 @@ The **Addition Assignment Operator** (`+=`) adds a value to a variable.
 ## The Object Datatype
 The object data type can contain both built-in objects, and user defined objects:</br>
 **Built-in object types can be :** objects, arrays, dates, maps, sets, intarrays, floatarrays, promises, and more.
+
+🔼 [Back to Top](#topics)
 
 # JavaScript Arrays
 
@@ -425,8 +429,9 @@ undefined,
 undefined,
 Lemon`
 
-# JavaScript Array Methods
+🔼 [Back to Top](#topics)
 
+# JavaScript Array Methods
 
 ## Basic Array Methods
 
@@ -684,6 +689,8 @@ document.getElementById("demo").innerHTML = fruits;
 
 <mark>**Note**</mark> All JavaScript objects have a toString() method.
 
+🔼 [Back to Top](#topics)
+
 # JavaScript Array Search
 
 ## JavaScript Array indexOf() 
@@ -765,6 +772,9 @@ The findLastIndex() method finds the index of the last element that satisfies a 
 const temp = [27, 28, 30, 40, 42, 35, 30];  
 let pos = temp.findLastIndex(x => x > 40);
 ```
+
+🔼 [Back to Top](#topics)
+
 # JavaScript Array Sort
 ## Sorting an Array
 The `sort()` method sorts an array alphabetically:
@@ -901,6 +911,9 @@ X06 110
 X07 110  
 [Demo »](https://www.w3schools.com/js/tryit.asp?filename=tryjs_array_stable_sort)
 
+🔼 [Back to Top](#topics)
+
+
 # Array Iteration Methods
 - Array forEach
 - Array map()
@@ -938,7 +951,7 @@ Note that the function takes 3 arguments:
 
 The example above uses only the value parameter. The example can be rewritten to:
 
-<pre>
+```js
 const numbers = [45, 4, 9, 16, 25];  
 let txt = "";  
 numbers.forEach(myFunction);
@@ -946,8 +959,7 @@ numbers.forEach(myFunction);
 function myFunction(value) {  
   txt += value + "&lt;br&gt;";  
 }
-</pre>
-
+```
 ## JavaScript Array map()
 The `map()` method creates a new array by performing a function on each array element.
 
@@ -1151,6 +1163,7 @@ const year = [...q1, ...q2, ...q3, ...q4];
 ```
 [Demo »](https://www.w3schools.com/js/tryit.asp?filename=tryjs_oper_spread_year)
 
+🔼 [Back to Top](#topics)
 
 # JavaScript Events
 
@@ -1343,6 +1356,8 @@ The six different values are described below.
 
     [Demo »](https://www.w3schools.com/js/tryit.asp?filename=tryjs_error_typeerror)
 
+🔼 [Back to Top](#topics)
+
 <!-- # DOM Manipulation
 hello
 # BOM Manipulation
@@ -1409,6 +1424,8 @@ console.log(myArr[0]); // Ford
 The result will be a string following the JSON notation.
 
 `myJSON` is now a string, and ready to be sent to a server:
+
+🔼 [Back to Top](#topics)
 
 # JavaScript Async
 **Synchronous :** Synchronous means the code runs in a particular sequence of instructions given in the program.
@@ -1951,3 +1968,5 @@ function getFullName (user) {
     .then((result) => console.log(result))
     .catch((err) => console.error(err))
     ```
+
+🔼 [Back to Top](#topics)
