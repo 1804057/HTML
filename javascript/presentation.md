@@ -544,7 +544,7 @@ Concatenating arrays means joining arrays end-to-end.
 
 - The `concat()` method can also take single value as arguments:
     ```js
-    const arr1 = \["Emil", "Tobias", "Linus"\];  
+    const arr1 = ["Emil", "Tobias", "Linus"];  
     const myChildren = arr1.concat("Peter"); 
     ```
 
@@ -698,7 +698,7 @@ The `indexOf()` method searches an array for an element value and returns its po
 
 Search an array for the item "Apple":
 ```js
-const fruits = \["Apple", "Orange", "Apple", "Mango"\];  
+const fruits = ["Apple", "Orange", "Apple", "Mango"];  
 let position = fruits.indexOf("Apple") + 1;
 ```
 - **Syntax :** _array_.indexOf(_item_, _start_)
@@ -728,7 +728,7 @@ The `find()` method returns the value of the first array element that passes a t
 This example finds (returns the value of) the first element that is larger than 18:
 
 ```js
-const numbers = \[4, 9, 16, 25, 29\];  
+const numbers = [4, 9, 16, 25, 29];  
 let first = numbers.find(myFunction); //25
 
 function myFunction(value, index, array) {  
